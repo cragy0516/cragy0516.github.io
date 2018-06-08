@@ -4,12 +4,14 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Hello, world!
 
-### More Information
+I have been studied in [ARGOS](http://www.argos.or.kr/) and [MadHat](https://go-madhat.github.io/).
 
-A place to include any other types of information that you'd like to include about yourself.
+Feel free to contact me!
+
+### Since 2018
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[cragy0516@gmail.com](mailto:cragy0516@gmail.com)
