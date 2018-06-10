@@ -83,7 +83,6 @@ CVE-2016-7612의 주요 골자는 위와 같습니다. ipc_port_t는 커널에�
 
 Port 권한은 자신에 대한 참조 카운트를 가지고 있습니다. 어떠한 메시지가 권한을 참조하면 해당 참조 카운트가 1 증가할것이고, 메시지가 소멸하면 참조 카운트는 1 감소할것입니다. 그런데 `ipc_kobject_server` 함수에는 다음과 같은 [코드](https://opensource.apple.com/source/xnu/xnu-124.7/osfmk/kern/ipc_kobject.c)가 있습니다.
 
-```
 {% highlight c linenos %}
 	if ((kr == KERN_SUCCESS) || (kr == MIG_NO_REPLY)) {
 		/*
@@ -105,7 +104,6 @@ Port 권한은 자신에 대한 참조 카운트를 가지고 있습니다. 어�
 		ipc_kmsg_destroy(request);
 	}
 {% endhighlight %}
-```
 
 현재 상태가 KERN_SUCCESS 또는 MIG_NO_REPLY라면, `ipc_kmsg_free` 함수가 호출됩니다. 그 밖의 경우에 대해서는 `ipc_kmsg_destroy`함수가 호출됩니다. 그런데 `ipc_kmsg_free` 함수가 단순히 메시지 헤더만을 파괴하여 메시지 내용에 포트 권한이 남아있다면 메시지 참조 횟수는 줄어들지 않습니다. 반면에, `ipc_kmsg_destroy` 함수는 메시지에 있는 모든 포트 권한에 대한 참조 카운터를 줄입니다.
 
