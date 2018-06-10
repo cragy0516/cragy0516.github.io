@@ -77,9 +77,7 @@ iOS 11 탈옥은 *현재 (2018-06-03)*를 기준으로, 굉장히 최근에 일�
 
 ### CVE-2016-7612
 
-```
-ipc_port_t 필드의 참조 카운트 오버 플로우로 인한 커널 UAF 발생.
-```
+> ipc_port_t 필드의 참조 카운트 오버 플로우로 인한 커널 UAF 발생.
 
 CVE-2016-7612의 주요 골자는 위와 같습니다. ipc_port_t는 커널에서 mach port를 정의한 구조체입니다. 해당 구조체는 `참조-카운트` 방식을 사용하므로, 구조체의 필드에는 `참조-카운트 변수(io_references)`가 존재합니다. `ip_reference`와 `ip_release` 함수는 이 변수를 원자적으로 증가시키거나 감소시킵니다. 또한 `참조-카운트 변수`는 32비트 변수인데, 값이 `오버플로우`를 검사하지 않습니다. 그렇다면 이 참조-카운트 변수가 어떻게 오버플로우 되어서 커널 UAF가 발생하는지 알아보도록 합시다.
 
@@ -182,9 +180,7 @@ static kern_return_t internal_io_service_add_notification_ool(
 
 ### CVE-2016-7633
 
-```
-유저 공간 MIG 코드에서 vm_deallocate의 중복으로 인한 UAF 버그 발생.
-```
+> 유저 공간 MIG 코드에서 vm_deallocate의 중복으로 인한 UAF 버그 발생.
 
 CVE-2016-7633 취약점을 요약하면 위와 같습니다. 이전 취약점에 비해서 내용이 짧은 편입니다. `mach_msg_server` 또는 `mach_msg_server_once`는 `원격 프로시저 호출(RPC)` 서버를 구현하는 데 사용됩니다. 이들은 유저 공간 MIG 서비스에서 사용되는데, MIG 핸들러 메소드가 에러코드를 반환하면 메시지의 자원에 대한 소유권이 없다고 생각하고 `mach_msg_server`와 `mach_msg_server_once`  함수는 `mach_msg_destroy` 함수를 수행하고자 합니다.
 
