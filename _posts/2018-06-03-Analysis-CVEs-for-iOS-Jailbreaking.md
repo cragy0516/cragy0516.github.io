@@ -83,7 +83,7 @@ CVE-2016-7612의 주요 골자는 위와 같습니다. ipc_port_t는 커널에�
 
 Port 권한은 자신에 대한 참조 카운트를 가지고 있습니다. 어떠한 메시지가 권한을 참조하면 해당 참조 카운트가 1 증가할것이고, 메시지가 소멸하면 참조 카운트는 1 감소할것입니다. 그런데 `ipc_kobject_server` 함수에는 다음과 같은 [코드](https://opensource.apple.com/source/xnu/xnu-124.7/osfmk/kern/ipc_kobject.c)가 있습니다.
 
-```
+```C
 	if ((kr == KERN_SUCCESS) || (kr == MIG_NO_REPLY)) {
 		/*
 		 *	The server function is responsible for the contents
