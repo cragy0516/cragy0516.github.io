@@ -83,7 +83,7 @@ CVE-2016-7612의 주요 골자는 위와 같습니다. ipc_port_t는 커널에�
 
 Port 권한은 자신에 대한 참조 카운트를 가지고 있습니다. 어떠한 메시지가 권한을 참조하면 해당 참조 카운트가 1 증가할것이고, 메시지가 소멸하면 참조 카운트는 1 감소할것입니다. 그런데 `ipc_kobject_server` 함수에는 다음과 같은 [코드](https://opensource.apple.com/source/xnu/xnu-124.7/osfmk/kern/ipc_kobject.c)가 있습니다.
 
-```javascript
+```c
 	if ((kr == KERN_SUCCESS) || (kr == MIG_NO_REPLY)) {
 		/*
 		 *	The server function is responsible for the contents
@@ -111,7 +111,7 @@ Port 권한은 자신에 대한 참조 카운트를 가지고 있습니다. 어�
 
 만약 MIG 메소드가 KERN_SUCCESS를 반환하지만, 실제로는 포트 권한을 파괴하지 않는다면 해당 포트 권한에 대한 참조는 유지될것이고, 이를 악용하는 데 사용할 수 있을것입니다. 다음은 내부 함수인 `internal_io_service_add_notification`을 확인해 봅시다.
 
-```
+```c
 static kern_return_t internal_io_service_add_notification(
     mach_port_t master_port,
 	io_name_t notification_type,
@@ -155,7 +155,7 @@ static kern_return_t internal_io_service_add_notification(
 
 해당 함수는 잘못된 커널 포트, 유효하지 않은 직렬화된 데이터 등의 케이스에 대한 에러를 가지고 있습니다. 이 경우에는 이 내부 함수가 인수로 전달된 `wake_port`에 대한 소유권을 취하지 않을것입니다. 그런데, MIG는 `internal_io_service_add_notification_ool` 함수의 반환값을 취합니다. 해당 함수를 보면
 
-```
+```c
 static kern_return_t internal_io_service_add_notification_ool(
   ...
     kr = vm_map_copyout( kernel_map, &map_data, (vm_map_copy_t) matching );
