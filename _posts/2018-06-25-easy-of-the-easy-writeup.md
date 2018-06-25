@@ -103,9 +103,12 @@ if __name__ == '__main__' :
 	main ()
 ```
 
-> root@ubuntu:~/CTF/h3x0r/easy_of_the_easy\# python local_exploit.py 
+> root@ubuntu:~/CTF/h3x0r/easy_of_the_easy\# python local_exploit.py
+> 
 > [\+] Starting local process './easy_of_the_easy': pid 5203
+> 
 > [\*] 0xf7d72da0
+> 
 > [\*] 0xf7e93a0b
 >
 > [\*] Switching to interactive mode
