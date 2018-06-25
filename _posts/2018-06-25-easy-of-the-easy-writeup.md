@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! "h3x0r CTF] easy_of_the_easy (pwn 300)
+title: ! tmp "h3x0r CTF] easy_of_the_easy (pwn 300)
 excerpt_separator: <!--more-->
 tags:
   - CTF
@@ -12,6 +12,7 @@ tags:
 <!--more-->
 
 > nc 49.236.136.140 14000
+>
 > [Download](https://h3x0r.kr/uploads/8/easy_of_the_easy)
 >
 > -Ho_9
@@ -109,12 +110,16 @@ if __name__ == '__main__' :
 >
 > [\*] Switching to interactive mode
 >
+> ==========================================
+>
 > ​            Secret           Way          
 >
 > ==========================================
 >
 > Good Luck!$ ls
+>
 > easy_of_the_easy  local_exploit.py
+>
 > $ 
 
 
