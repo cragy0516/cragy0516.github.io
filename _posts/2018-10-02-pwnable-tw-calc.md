@@ -3,7 +3,6 @@ layout: post
 title: ! ' [pwnable.tw] calc writeup '
 excerpt_separator: <!--more-->
 tags:
-  - KRater
   - Write-up
   - pwnable.tw
   - pwnable

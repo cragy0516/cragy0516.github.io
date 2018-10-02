@@ -3,7 +3,6 @@ layout: post
 title: ! ' Hello, PyJail! '
 excerpt_separator: <!--more-->
 tags:
-  - KRater
   - Write-up
   - CTF
   - ChristmasCTF2017
