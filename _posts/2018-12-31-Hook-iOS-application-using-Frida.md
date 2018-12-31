@@ -5,6 +5,11 @@ excerpt_separator: <!--more-->
 tags:
   - iOS
 ---
+
+Frida를 이용한 iOS 어플리케이션 후킹에 대해 알아보도록 한다.
+
+<!--more-->
+
 # Frida
 
 Frida는 Windows, macOS, GNU/Linux, iOS, Android, QNX 플랫폼 위의 다양한 어플리케이션에 자바스크립트 코드 조각들을 삽입할 수 있도록 도와주는 도구이다. Frida API를 활용해서 다양한 기능들을 사용할 수 있도록 만들어져 있다. 주로 어떠한 어플리케이션의 API를 추적(trace)하거나, 이미 개발된 어플리케이션에 로깅 함수를 삽입(inject)하여 번거로운 빌드 과정 없이도 테스트를 진행할 수 있도록 하는 데 Frida를 사용할 수 있다.
