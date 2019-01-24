@@ -17,13 +17,13 @@ Nginx + CTFd를 Docker로 설치 해 본다.
 
 현재 [CTFd](https://github.com/CTFd/CTFd) 플랫폼을 이용해서 CTF 페이지 개발하는거에 재미가 들려있는데.. 한창 개발하던 도중 `Docker`로 제공된 `CTFd Image`는 `HTTPS`연결을 설정할 수가 없었다...!!!
 
-`CTFd Image`는 `gunicorn + flask`를 이용해서 pyuthon web 어플리케이션이 제작되어 있는데, `Docker`로 이미지를 설치해서 `run` 하면 해당 어플리케이션이 바로 실행되는 구조였다.
+`CTFd Image`는 `gunicorn + flask`를 이용해서 python web 어플리케이션이 제작되어 있는데, `Docker`로 이미지를 설치해서 `run` 하면 해당 어플리케이션이 바로 실행되는 구조였다.
 
 아마 `gsunicorn`이나 `flask`에서 제공하는 자체 내장 웹 서버를 사용하는 것으로 보였는데, `gunicorn`은 안 써봐서 모르겠고 하여튼간에 그냥 여기다가 인증서 넣고 대충 설정 끼적이면 `HTTPS` 연결이 되겠거니 했는데… **안됨 OTL**
 
 아, 포기할 수는 없지않나. 그래서 해봤다 삽질.
 
-일단 현재 `Docker Container`가 된 `MyCTFd` (가칭)는 계속 돌려놔야한다. 이거 `commit` 해서 `Docker image`로 떠 놓은 뒤 얘로 `docker-compose`를 통해서 `nginx + CTFd` 설치하면 깔끔하지 않느냐? 물론 맞는말이긴 한데, 이럼 db고 뭐고 싹다 날아가서 설정 처음부터 다시해야되고 문제도 처음부터 다시올려야되는데 db만 백업해서 써도 되긴하지만 귀찮지 않은가. ~~(의식의 흐름 무엇;)~~ `docker-compose`를 통해서 `nginx + CTFd`를 설치하는 방법은 pass. (지금 상황이 이래서 그렇지 보통은 이렇게 한다… 아직 개발을 시작 안한 분이라면 이 방법으로 하시길 ㅠ github 등지를 잘 찾아보면 나옴.)
+일단 현재 `Docker Container`가 된 `app` (가칭)는 계속 돌려놔야한다. 이거 `commit` 해서 `Docker image`로 떠 놓은 뒤 얘로 `docker-compose`를 통해서 `nginx + CTFd` 설치하면 깔끔하지 않느냐? 물론 맞는말이긴 한데, 이럼 db고 뭐고 싹다 날아가서 설정 처음부터 다시해야되고 문제도 처음부터 다시올려야되는데 db만 백업해서 써도 되긴하지만 귀찮지 않은가. ~~(의식의 흐름 무엇;)~~ `docker-compose`를 통해서 `nginx + CTFd`를 설치하는 방법은 pass. (지금 상황이 이래서 그렇지 보통은 이렇게 한다… 아직 개발을 시작 안한 분이라면 이 방법으로 하시길 ㅠ github 등지를 잘 찾아보면 나옴.)
 
 그럼 이제 어떻게 해야하지? 정답은 `nginx docker image`를 이용해서 컨테이너를 만든 뒤 이거랑 `CTFd`를 통신시키기로 했다. 이게 뭔소리냐고? 그래서 그림을 준비했다.
 
