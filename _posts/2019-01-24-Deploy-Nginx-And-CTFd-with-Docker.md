@@ -109,6 +109,8 @@ server {
 
 `/opt/cert/`가 아까 `mount`한 인증서 있는 디렉토리란거 생각해두고, IP 주소 말고 컨테이너 이름으로 접속 가능한것도 알아두면 편하다. 그리고 `default_server `까먹지 말고. 안하면 오류남
 
+인증서도 `ssl_certificate`는 `fullchain.pem`, `ssl_certificate_key`는 `privkey.pem`으로 해야 하는거 잊지말자.
+
 암튼 세팅은 다 햇으니 인증서를 적용시켜보자
 
 ## 인증서ㅏ어어
