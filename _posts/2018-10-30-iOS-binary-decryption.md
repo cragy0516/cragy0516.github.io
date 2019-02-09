@@ -2,8 +2,8 @@
 layout: post
 title: ! 'Extract & Decrypt IPA from iOS 11 with bfinject'
 excerpt_separator: <!--more-->
+comments: true
 tags:
-  - KRater
   - iOS
 ---
 

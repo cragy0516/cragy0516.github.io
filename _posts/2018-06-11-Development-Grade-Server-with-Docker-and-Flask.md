@@ -2,6 +2,7 @@
 layout: post
 title: Development Grade Server with Docker and Flask
 excerpt_separator: <!--more-->
+comments: true
 tags:
   - Development
 ---

@@ -2,6 +2,7 @@
 layout: post
 title: ! '[pwnable.kr] blukat & horcruxes'
 excerpt_separator: <!--more-->
+comments: true
 tags:
   - Write-up
   - Wargame

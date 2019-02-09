@@ -2,6 +2,7 @@
 layout: post
 title: ! ' [pwnable.tw] calc writeup '
 excerpt_separator: <!--more-->
+comments: true
 tags:
   - Write-up
   - pwnable.tw

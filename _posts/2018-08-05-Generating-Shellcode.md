@@ -2,6 +2,7 @@
 layout: post
 title: ! ' [pwnable.tw] orw (100pt) '
 excerpt_separator: <!--more-->
+comments: true
 tags:
   - Write-up
   - Wargame

@@ -2,6 +2,7 @@
 layout: post
 title: ! '[Codegate2018 CTF] super marimo writeup'
 excerpt_separator: <!--more-->
+comments: true
 tags:
   - CTF
   - Write-up

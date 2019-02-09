@@ -2,6 +2,7 @@
 layout: post
 title: ! '[h3x0r CTF] easy_of_the_easy (pwn 300)'
 excerpt_separator: <!--more-->
+comments: true
 tags:
   - CTF
   - Write-up

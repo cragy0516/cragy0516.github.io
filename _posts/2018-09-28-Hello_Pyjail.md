@@ -2,6 +2,7 @@
 layout: post
 title: ! ' Hello, PyJail! '
 excerpt_separator: <!--more-->
+comments: true
 tags:
   - Write-up
   - CTF

@@ -2,6 +2,7 @@
 layout: post
 title: ! 'Deploy Nginx And CTFd with Docker'
 excerpt_separator: <!--more-->
+comments: true
 tags:
   - Development
   - CTFd

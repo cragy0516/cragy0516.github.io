@@ -2,6 +2,7 @@
 layout: post
 title: ! ' [GoogleCTF2018 Quals] Begginers Quest (2) '
 excerpt_separator: <!--more-->
+comments: true
 tags:
   - Write-up
   - CTF

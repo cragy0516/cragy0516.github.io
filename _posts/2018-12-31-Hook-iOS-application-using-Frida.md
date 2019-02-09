@@ -2,6 +2,7 @@
 layout: post
 title: ! 'Hook iOS applications using Frida'
 excerpt_separator: <!--more-->
+comments: true
 tags:
   - iOS
 ---

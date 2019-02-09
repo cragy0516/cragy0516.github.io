@@ -2,8 +2,9 @@
 layout: post
 title: ! 'Fix the problem that IDA Pro 7.0 Crash on MacOS Mojave'
 excerpt_separator: <!--more-->
+comments: true
 tags:
-  - KRater
+  - Bug Fix
 ---
 
 MacOS Mojave에서 IDA pro 7.0을 구동하면 크래쉬가 터지는 버그가 존재합니다. 이번 포스팅에서는 이에 대한 패치를 안내해드리도록 하겠습니다.

@@ -2,6 +2,7 @@
 layout: post
 title: ! '[h3x0r CTF] whattheheap (pwn 420)'
 excerpt_separator: <!--more-->
+comments: true
 tags:
   - CTF
   - Write-up

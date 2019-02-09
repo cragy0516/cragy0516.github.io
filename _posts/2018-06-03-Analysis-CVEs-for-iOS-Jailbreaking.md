@@ -2,6 +2,7 @@
 layout: post
 title: Analysis CVEs for iOS Jailbreaking
 excerpt_separator: <!--more-->
+comments: true
 tags:
   - Analysis
   - iOS
