@@ -4,7 +4,6 @@ title: ! "[DefconCTF 2019] speedrun-003"
 excerpt_separator: <!--more-->
 comments : true
 tags:
-  - KRater
   - Defcon CTF
   - Write-up
 ---
