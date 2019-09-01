@@ -4,7 +4,6 @@ title: ! "Stardew Valley 분석해보기 -1-"
 excerpt_separator: <!--more-->
 comments : true
 tags:
-  - KRater
   - Stardew Valley
   - Game
   - For Fun
@@ -65,4 +64,3 @@ tags:
 ### 결론
 
 이를 토대로 실제 XNB 파일을 변조하면 게임 데이터에도 영향을 줄 수 있다는 것을 파악하였다. 뭔가 더 재밌는 영향을 주고싶어서 언패킹된 모든 `.xnb`파일들을 분석하고 있는데, 이게 생각보다 오래걸리는 작업이고 `.xnb` 파일에 포함된 실제 데이터는 미미한 수준인 것 같다. 아무튼 분석은 계속 진행해 봐야겠다. 끄읏~
-

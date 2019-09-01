@@ -4,7 +4,6 @@ title: ! "[volgaCTF 2019] higher"
 excerpt_separator: <!--more-->
 comments : true
 tags:
-  - KRater
   - volgaCTF2019
   - Write-up
   - CTF
