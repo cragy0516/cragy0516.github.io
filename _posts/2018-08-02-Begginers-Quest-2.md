@@ -338,3 +338,6 @@ py 파일 받아보면 랜덤으로 섞어주는부분에 취약점이 있다. a
 > " by "CTF{fridge_cast_oauth_token_cahn4Quo}
 >
 > "
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE4ODIwMTMyMTldfQ==
+-->
