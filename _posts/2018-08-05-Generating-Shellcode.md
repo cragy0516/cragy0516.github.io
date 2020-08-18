@@ -63,3 +63,6 @@ log.info(len(shellcode))
 쉘코드가... 그냥 뚝딱 하고 나와버린다.
 
 사랑합니다 `pwntools` ㅠㅠㅠㅠㅠ
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEzODAwODkxMDFdfQ==
+-->
