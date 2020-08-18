@@ -20,3 +20,6 @@ MacOS Mojave에서 IDA pro 7.0을 구동하면 크래쉬가 터지는 버그가 
 해당 이슈는 MacOS Mojave에서 IDA pro 7.0에 영어가 아닌 입력 형식을 적용할 경우에 발생합니다. 따라서 한글 입력을 엄청난 정신력으로(?) 막아내면서 영어만 사용하시면 그냥 그대로 사용하실 수 있습니다. 하지만 카카오톡 등등을 사용하느라 깜빡하고 한글 입력 상태를 영어 입력으로 바꾸지 않았다는 이유만으로 크래쉬가 터지는 것은 굉장히 불합리한 일입니다. 다행히 이러한 점을 규명한 분이 [Github에 IDA Pro 7.0을 위한 긴급 패치](https://github.com/fjh658/IDA7.0_SP)를 만들어 적용법까지 상세하게 올려주셨습니다. 원인 파악도 꽤 자세하게 적혀있는 편 이네요.
 
 적용 방법은 Github에 나와있듯이 `libqcocoa.dylib` 파일을 다운로드 받아서 `/Applications/IDA Pro 7.0/ida.app/Contents/PlugIns/platforms/libqcocoa.dylib` 파일을 덮어쓰면 됩니다. 아주 깔끔하게 적용되네요! 이에 대한 원인 분석도 나와있는데 나중에 시간이 좀 여유로울 때 한번 확인 해 보아야 겠습니다~
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE0ODE2ODE3MTddfQ==
+-->
