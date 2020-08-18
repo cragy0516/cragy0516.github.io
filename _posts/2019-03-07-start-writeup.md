@@ -132,3 +132,6 @@ r.interactive()
 ```
 
 쉬운 문제였지만 감을 잃지 않으려면 꾸준히 노력해야 한다는 것을 깨닫게 해 준 고마운 문제였다.
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTc3MDYwMzU3XX0=
+-->
