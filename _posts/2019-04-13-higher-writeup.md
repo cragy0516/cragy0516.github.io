@@ -39,3 +39,6 @@ tags:
 이를 텍스트로 변조하자. 사이트는 [이곳](https://cryptii.com/pipes/binary-decoder)을 활용하였다.
 
 ```VolgaCTF{N0t_4ll_c4n_b3_h34rd}```
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNzcyMjE5NThdfQ==
+-->
