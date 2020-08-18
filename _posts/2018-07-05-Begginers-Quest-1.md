@@ -113,3 +113,6 @@ Floppy 문제에서 얻은 파일 중에 www.com 이라는 파일이 있다. MS-
 그리고 `F5`를 눌러서 실행해보니 data 영역에 플래그가 들어온것을 볼 수 있었다.
 
 계속 풀어볼 예정!
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMzUyNjUyOTc4XX0=
+-->
