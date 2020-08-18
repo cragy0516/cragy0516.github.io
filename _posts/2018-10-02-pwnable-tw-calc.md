@@ -124,3 +124,6 @@ if __name__ == '__main__' :
 ![]({{ site.baseurl }}/images/KRater/2018-10-02-pwnable-tw-calc/pic10.PNG)
 
 읽어주셔서 감사합니다 :)
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMjIyNTc1NDEyXX0=
+-->
