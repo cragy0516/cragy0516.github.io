@@ -121,3 +121,6 @@ if __name__ == '__main__' :
 재밌는 문제였지만 추후에 출제자분께 여쭤보니 다른 `intended solution`이 있다고 한다.
 
 해당 방법을 사용해서 나중에 다시 풀어봐야 겠다!
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEyNTE5NTc1MjFdfQ==
+-->
