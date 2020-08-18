@@ -6,6 +6,8 @@ comments: true
 tags:
   - Write-up
   - Wargame
+  - pwnable.kr
+  - pwnable
 ---
 
 [pwnable.kr](http://pwnable.kr)에서 `Toddler's Bottle` 올클했는데 두 문제 더나왔다.
@@ -179,3 +181,6 @@ if __name__ == '__main__' :
 > ---flag is here---
 
 끗~
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbODc5NzY0MzE3XX0=
+-->
